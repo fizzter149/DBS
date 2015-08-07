@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@android:color/holo_red_light" />
+
+    <!--Top Content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5"
+        android:background="#D0D0D0"
+        android:paddingTop="30dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/due_training_sessions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:text="@string/due_training_sessions"
+                android:textSize="@dimen/abc_text_size_headline_material"/>
+                <!--style="?android:attr/listSeparatorTextViewStyle"/>-->
+
+            <Button android:id="@+id/button_see_all_trainings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/see_all"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_light"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="245dp"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light" />
+
+        <android.support.v7.widget.RecyclerView android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="15dp"/>
+
+    </LinearLayout>
+
+    <!--Bottom Content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:paddingTop="30dp"
+            android:paddingLeft="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="20dp">
+                <TextView android:id="@+id/knowledge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/knowledge"
+                    android:textSize="@dimen/abc_text_size_headline_material"/>
+                <!--style="?android:attr/listSeparatorTextViewStyle"/>-->
+
+                <Button android:id="@+id/button_see_all_knowledges"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/see_all"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/holo_red_light"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="118dp"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_red_light" />
+
+
+        </LinearLayout>
+
+        <!--Line separator between Bottom Content Left and Bottom Content Top-->
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!--Bottom Content Right-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:paddingTop="90dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="25dp">
+
+            <!--Evaluation Box-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--Upper Box-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:background="@android:color/holo_red_light"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/evaluation_form_title"
+                        android:textSize="@dimen/abc_text_size_headline_material"
+                        android:textColor="@android:color/white"
+                        android:paddingBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/evaluation_form_intro"
+                        android:textSize="@dimen/abc_text_size_subhead_material"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+
+                <!--Lower Box-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:background="@android:color/holo_red_dark"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/evaluation_form_submit"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:background="@android:color/white"
+                        android:textSize="@dimen/abc_text_size_subhead_material"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:id="@+id/button_submit_evaluation_form"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--Footer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#D0D0D0"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright"/>
+    </LinearLayout>
+
+
+</LinearLayout>

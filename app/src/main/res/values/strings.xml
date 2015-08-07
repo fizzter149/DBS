@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">DBS</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="due_training_sessions">Due Training Sessions</string>
+    <string name="training_date">25 Aug</string>
+    <string name="training_title">Training Session Title</string>
+    <string name="training_department_title">Department Title</string>
+    <string name="knowledge">Knowledge</string>
+    <string name="see_all">SEE ALL</string>
+    <string name="copyright">Copyright - DBS Asia</string>
+    <string name="evaluation_form_title">Evaluation Form</string>
+    <string name="evaluation_form_intro">Greyhound divisively hello coldly wonderfully marginally far upon excluding. WTF?</string>
+    <string name="evaluation_form_submit">Submit My Evaluation Form</string>
+    <string name="training_tab">TRAINING</string>
+    <string name="knowledge_tab">KNOWLEDGE</string>
+    <string name="evaluation_form_tabl">EVALUATION FORM</string>
+</resources>
