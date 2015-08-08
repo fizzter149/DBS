@@ -1,106 +1,138 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@android:color/holo_red_light" />
+        android:background="@color/actionbar_underline" />
 
     <!--Top Content-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4.5"
-        android:background="#D0D0D0"
-        android:paddingTop="30dp"
-        android:paddingLeft="50dp"
-        android:paddingRight="30dp"
-        android:orientation="vertical">
+        android:background="@color/calendar_background"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/section_padding_large"
+        android:paddingRight="@dimen/section_padding_large"
+        android:paddingTop="@dimen/section_padding_medium"
+        android:paddingBottom="@dimen/section_padding_medium">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView android:id="@+id/due_training_sessions"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:text="@string/due_training_sessions"
-                android:textSize="@dimen/abc_text_size_headline_material"/>
-                <!--style="?android:attr/listSeparatorTextViewStyle"/>-->
+            android:layout_height="wrap_content">
 
-            <Button android:id="@+id/button_see_all_trainings"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/due_training_sessions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/due_training_sessions"
+                    android:textSize="@dimen/abc_text_size_headline_material"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/title_underline" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_see_all_trainings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/see_all"
                 android:text="@string/see_all"
-                android:textColor="@android:color/white"
-                android:background="@android:color/holo_red_light"/>
-        </LinearLayout>
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
 
-        <View
-            android:layout_width="245dp"
-            android:layout_height="2dp"
-            android:background="@android:color/holo_red_light" />
-
-        <android.support.v7.widget.RecyclerView android:id="@+id/my_recycler_view"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="15dp"/>
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/calendar_card_padding" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/calendar_gradient"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
     <!--Bottom Content-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4.5"
+        android:background="@color/knowledge_background"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="7"
-            android:paddingTop="30dp"
-            android:paddingLeft="50dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/section_padding_large"
+            android:paddingRight="@dimen/section_padding_large"
+            android:paddingTop="@dimen/section_padding_medium"
+            android:paddingBottom="@dimen/section_padding_medium">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingRight="20dp">
-                <TextView android:id="@+id/knowledge"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="8"
-                    android:text="@string/knowledge"
-                    android:textSize="@dimen/abc_text_size_headline_material"/>
-                <!--style="?android:attr/listSeparatorTextViewStyle"/>-->
+                android:layout_height="wrap_content">
 
-                <Button android:id="@+id/button_see_all_knowledges"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/knowledge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/knowledge"
+                        android:textSize="@dimen/abc_text_size_headline_material"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/title_underline" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_see_all_knowledges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/see_all"
                     android:text="@string/see_all"
-                    android:textColor="@android:color/white"
-                    android:background="@android:color/holo_red_light"/>
-            </LinearLayout>
-
-            <View
-                android:layout_width="118dp"
-                android:layout_height="2dp"
-                android:background="@android:color/holo_red_light" />
-
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
 
         </LinearLayout>
 
         <!--Line separator between Bottom Content Left and Bottom Content Top-->
         <View
-            android:layout_width="0.5dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray" />
 
@@ -109,10 +141,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:paddingTop="90dp"
-            android:paddingLeft="10dp"
-            android:paddingBottom="10dp"
-            android:paddingRight="25dp">
+            android:paddingLeft="@dimen/section_padding_large"
+            android:paddingRight="@dimen/section_padding_large"
+            android:paddingTop="@dimen/section_padding_medium"
+            android:paddingBottom="@dimen/section_padding_medium">
 
             <!--Evaluation Box-->
             <LinearLayout
@@ -125,25 +157,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="6"
-                    android:background="@android:color/holo_red_light"
+                    android:background="@color/evaluation_form_1"
                     android:orientation="vertical"
-                    android:paddingTop="20dp"
-                    android:paddingLeft="15dp">
+                    android:paddingLeft="15dp"
+                    android:paddingTop="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
                         android:text="@string/evaluation_form_title"
-                        android:textSize="@dimen/abc_text_size_headline_material"
                         android:textColor="@android:color/white"
-                        android:paddingBottom="10dp"/>
+                        android:textSize="@dimen/abc_text_size_headline_material" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/evaluation_form_intro"
-                        android:textSize="@dimen/abc_text_size_subhead_material"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/abc_text_size_subhead_material" />
 
                 </LinearLayout>
 
@@ -152,20 +184,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="4"
-                    android:background="@android:color/holo_red_dark"
+                    android:background="@color/evaluation_form_2"
                     android:gravity="center">
 
                     <Button
+                        android:id="@+id/button_submit_evaluation_form"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/evaluation_form_submit"
-                        android:textColor="@android:color/holo_red_dark"
                         android:background="@android:color/white"
-                        android:textSize="@dimen/abc_text_size_subhead_material"
+                        android:gravity="center"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:id="@+id/button_submit_evaluation_form"
-                        android:gravity="center"/>
+                        android:text="@string/evaluation_form_submit"
+                        android:textColor="@color/see_all"
+                        android:textSize="@dimen/abc_text_size_subhead_material" />
 
                 </LinearLayout>
 
@@ -187,8 +219,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/copyright"/>
+            android:textStyle="bold"
+            android:text="@string/copyright" />
     </LinearLayout>
-
 
 </LinearLayout>
