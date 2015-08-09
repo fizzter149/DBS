@@ -10,7 +10,17 @@
     <!-- calendar -->
     <dimen name="calendar_card_width">300dp</dimen>
     <dimen name="calendar_card_padding">20dp</dimen>
-    <dimen name="calendar_element_margin">12dp</dimen>
+    <dimen name="calendar_element_margin">10dp</dimen>
     <dimen name="calendar_date_text_size">52sp</dimen>
-    <dimen name="calendar_title_text_size">36sp</dimen>
+    <dimen name="calendar_title_text_size">32sp</dimen>
+    
+    <!-- knowledge -->
+    <dimen name="knowledge_title_text_size">20sp</dimen>
+    <dimen name="knowledge_category_text_size">10sp</dimen>
+    <dimen name="knowledge_description_text_size">12sp</dimen>
+    <dimen name="knowledge_card_width">350dp</dimen>
+    <dimen name="knowledge_card_height">225dp</dimen>
+    <dimen name="knowledge_card_padding">16dp</dimen>
+    <dimen name="knowledge_element_margin">8dp</dimen>
+    
 </resources>

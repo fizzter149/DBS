@@ -19,4 +19,9 @@
     <string name="training_tab">TRAINING</string>
     <string name="knowledge_tab">KNOWLEDGE</string>
     <string name="evaluation_form_tabl">EVALUATION FORM</string>
+
+    <!-- default string for knowledge card -->
+    <string name="knowledge_title">Article Title</string>
+    <string name="knowledge_category">Article Category</string>
+    <string name="knowledge_description">Greyhound divisively hello coldly wonderfully marginally far upon excluding</string>
 </resources>

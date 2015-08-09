@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -24,6 +25,10 @@ public class HomeActivity extends AppCompatActivity {
     private String[] toppings = {"Cheese", "Pepperoni", "Black Olives", "Tahu", "Tempe"};
     private List<Person> persons;
     private List<TrainingEvent> trainingEvents;
+
+    private RecyclerView knowledgeRV;
+    private RecyclerView.Adapter knowledgeRVA;
+    private RecyclerView.LayoutManager knowledgeRVLM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,13 @@ public class HomeActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
         mAdapter = new RVAdapter(trainingEvents);
         mRecyclerView.setAdapter(mAdapter);
+
+        knowledgeRV = (RecyclerView) findViewById(R.id.knowledge_list);
+        knowledgeRV.setHasFixedSize(true);
+        knowledgeRVLM = new GridLayoutManager(this, 3);
+        knowledgeRV.setLayoutManager(knowledgeRVLM);
+        knowledgeRVA = new KnowledgeAdapter();
+        knowledgeRV.setAdapter(knowledgeRVA);
     }
 
 
