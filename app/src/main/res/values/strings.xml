@@ -4,6 +4,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- tab -->
+    <string name="home_tab">HOME</string>
+    <string name="training_tab">TRAINING</string>
+    <string name="knowledge_tab">KNOWLEDGE</string>
+    <string name="evaluation_form_tabl">EVALUATION FORM</string>
+
     <!-- default text for calendar card -->
     <string name="due_training_sessions">Due Training Sessions</string>
     <string name="training_date">25 Aug</string>
@@ -16,9 +22,7 @@
     <string name="evaluation_form_title">Evaluation Form</string>
     <string name="evaluation_form_intro">Greyhound divisively hello coldly wonderfully marginally far upon excluding. WTF?</string>
     <string name="evaluation_form_submit">Submit My Evaluation Form</string>
-    <string name="training_tab">TRAINING</string>
-    <string name="knowledge_tab">KNOWLEDGE</string>
-    <string name="evaluation_form_tabl">EVALUATION FORM</string>
+
 
     <!-- default string for knowledge card -->
     <string name="knowledge_title">Article Title</string>
